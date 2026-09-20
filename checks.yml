@@ -1,0 +1,61 @@
+# CI for vibe-code-audit.
+#
+# What this workflow is: the claim table's "recomputable by anyone"
+# promise, run continuously. VCA_016 states the pinned self-scan sample
+# is perishable by construction; this workflow is the mechanism that
+# detects the perishing instead of letting it pass silently.
+#
+# What this workflow is NOT: a quality gate on the tools' outputs. It
+# runs the check suite and the module selftests. It does not audit
+# anyone's code and produces no verdicts about other repositories.
+
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+        # 3.9 is the floor the README claims ("parses under 3.9");
+        # 3.12 is a current version. Testing both makes the claim
+        # measured rather than asserted.
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: module selftests
+        run: |
+          python3 crosslink_scan.py --selftest
+          python3 situation_help.py LIST > /dev/null
+
+      - name: check suite
+        run: python3 test_audit.py
+
+      - name: regenerable samples still reproduce
+        # VCA_016: the pinned self-scan re-derives from the tree.
+        # The suite's self.files_stable check covers this; this step
+        # makes the scan itself visible in the log as evidence.
+        run: |
+          python3 crosslink_scan.py . --out /tmp/rescan.json
+          python3 - <<'EOF'
+          import json
+          pinned = json.load(open("samples/self_scan.sample.json"))
+          fresh = json.load(open("/tmp/rescan.json"))
+          assert set(pinned["files"]) == set(fresh["files"]), (
+              "file set drifted: %s vs %s"
+              % (pinned["files"], fresh["files"]))
+          print("sample reproduces: %d files, %d edges pinned"
+                % (len(pinned["files"]), pinned["counts"]["edges"]))
+          EOF
