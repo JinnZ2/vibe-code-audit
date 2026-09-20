@@ -1,0 +1,10 @@
+tool_use_audit -- /mnt/agents/output/vibe-code-audit-repo
+======================================================================
+ 1.0 T1_inventory  TOOL                   RESOLVED         files=4, entry_points=0, doc-named=8, phantom(doc-named but 
+ 1.0 T2_claim_reachability  TOOL_USE               RESOLVED         cited=17, code-connected=2, CLAIM_UNREACHABLE=['VCA_003', 'V
+ 1.0 T3_doc_currency  HELP_FULL              RESOLVED         doc->file edges=31, STALE(unresolvable)=['a/b/c.py', 'audit.
+ 1.0 T4_two_way  HELP_FULL              RESOLVED         forward links with resolvable targets checked; two-way=8, on
+ 1.0 T5_situation_declared  SITUATION              RESOLVED         situation surface linked: 22 edge(s) naming situations
+ 1.0 T6_absence_named  TOOL_USE               RESOLVED         no absence cells arose in this run; the refusal path is exer
+----------------------------------------------------------------------
+score 6.0 of 6.0   scored 6   refusal_fraction 0.00

@@ -1,0 +1,3 @@
+Our internal tool's documentation says it recomputes every number it
+ships, but nobody can find the code that produces the headline figure
+in the quarterly report. The claims and the code feel disconnected.

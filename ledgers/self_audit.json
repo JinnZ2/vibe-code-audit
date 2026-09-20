@@ -1,0 +1,50 @@
+{
+  "schema": "vca-audit-ledger/1",
+  "artifact": "/mnt/agents/output/vibe-code-audit-repo",
+  "order": [
+    "T1_inventory",
+    "T2_claim_reachability",
+    "T3_doc_currency",
+    "T4_two_way",
+    "T5_situation_declared",
+    "T6_absence_named"
+  ],
+  "entries": {
+    "T1_inventory": {
+      "verdict": "RESOLVED",
+      "finding": "files=4, entry_points=0, doc-named=8, phantom(doc-named but absent)=['a/b/c.py', 'audit.py', 'foo.py', 'ghost.py']",
+      "reason": "",
+      "confidence": null
+    },
+    "T2_claim_reachability": {
+      "verdict": "RESOLVED",
+      "finding": "cited=17, code-connected=2, CLAIM_UNREACHABLE=['VCA_003', 'VCA_004', 'VCA_005', 'VCA_006', 'VCA_007', 'VCA_008', 'VCA_009', 'VCA_010', 'VCA_011', 'VCA_012', 'VCA_013', 'VCA_014', 'VCA_015', 'VCA_016', 'VCA_017']",
+      "reason": "",
+      "confidence": null
+    },
+    "T3_doc_currency": {
+      "verdict": "RESOLVED",
+      "finding": "doc->file edges=31, STALE(unresolvable)=['a/b/c.py', 'audit.py', 'foo.py', 'ghost.py', 'target']",
+      "reason": "",
+      "confidence": null
+    },
+    "T4_two_way": {
+      "verdict": "RESOLVED",
+      "finding": "forward links with resolvable targets checked; two-way=8, one-way=17",
+      "reason": "",
+      "confidence": null
+    },
+    "T5_situation_declared": {
+      "verdict": "RESOLVED",
+      "finding": "situation surface linked: 22 edge(s) naming situations",
+      "reason": "",
+      "confidence": null
+    },
+    "T6_absence_named": {
+      "verdict": "RESOLVED",
+      "finding": "no absence cells arose in this run; the refusal path is exercised by the suite, not asserted here",
+      "reason": "",
+      "confidence": null
+    }
+  }
+}

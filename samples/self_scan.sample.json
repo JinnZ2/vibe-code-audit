@@ -1,0 +1,990 @@
+{
+  "schema": "vca-edge-ledger/1",
+  "base": "/mnt/agents/output/vibe-code-audit-repo",
+  "files": [
+    "CLAIM_TABLE.md",
+    "README.md",
+    "WORK_ORDER.md",
+    "crosslink_scan.py",
+    "situation_help.py",
+    "situations/disconnected_claims.txt",
+    "situations/inherited_repo.txt",
+    "test_audit.py",
+    "tool_use_audit.py"
+  ],
+  "edges": [
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "python3 test_audit.py",
+      "kind": "command",
+      "line": 6,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 6,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 10,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 12,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_002",
+      "kind": "cites_claim",
+      "line": 23,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_003",
+      "kind": "cites_claim",
+      "line": 32,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_004",
+      "kind": "cites_claim",
+      "line": 38,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "ghost.py",
+      "kind": "path_ref",
+      "line": 40,
+      "resolvable": false
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_005",
+      "kind": "cites_claim",
+      "line": 46,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_006",
+      "kind": "cites_claim",
+      "line": 51,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 56,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_007",
+      "kind": "cites_claim",
+      "line": 58,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_008",
+      "kind": "cites_claim",
+      "line": 64,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_009",
+      "kind": "cites_claim",
+      "line": 73,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_010",
+      "kind": "cites_claim",
+      "line": 79,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_011",
+      "kind": "cites_claim",
+      "line": 89,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_012",
+      "kind": "cites_claim",
+      "line": 94,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 102,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_013",
+      "kind": "cites_claim",
+      "line": 104,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_014",
+      "kind": "cites_claim",
+      "line": 113,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_015",
+      "kind": "cites_claim",
+      "line": 121,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 123,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 123,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 124,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_016",
+      "kind": "cites_claim",
+      "line": 131,
+      "resolvable": null
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "samples/self_scan.sample.json",
+      "kind": "path_ref",
+      "line": 133,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 137,
+      "resolvable": true
+    },
+    {
+      "source": "CLAIM_TABLE.md",
+      "target": "VCA_017",
+      "kind": "cites_claim",
+      "line": 141,
+      "resolvable": null
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 14,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 15,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 16,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 17,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 18,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 19,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 20,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 57,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 60,
+      "resolvable": false
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 74,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 76,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 78,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 81,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "WORK_ORDER.md",
+      "kind": "path_ref",
+      "line": 85,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 86,
+      "resolvable": null
+    },
+    {
+      "source": "README.md",
+      "target": "VCA_016",
+      "kind": "cites_claim",
+      "line": 86,
+      "resolvable": null
+    },
+    {
+      "source": "README.md",
+      "target": "CLAIM_TABLE.md",
+      "kind": "path_ref",
+      "line": 86,
+      "resolvable": true
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 13,
+      "resolvable": true
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "a/b/c.py",
+      "kind": "path_ref",
+      "line": 15,
+      "resolvable": false
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "python3 foo.py --bar",
+      "kind": "command",
+      "line": 17,
+      "resolvable": false
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "foo.py",
+      "kind": "path_ref",
+      "line": 17,
+      "resolvable": false
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "target",
+      "kind": "md_link",
+      "line": 18,
+      "resolvable": false,
+      "note": "text"
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 20,
+      "resolvable": null
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 27,
+      "resolvable": true
+    },
+    {
+      "source": "WORK_ORDER.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 45,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "ast",
+      "kind": "import",
+      "line": 36,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "json",
+      "kind": "import",
+      "line": 37,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "os",
+      "kind": "import",
+      "line": 38,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "re",
+      "kind": "import",
+      "line": 39,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "sys",
+      "kind": "import",
+      "line": 40,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 2,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 13,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 19,
+      "resolvable": false
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 32,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 33,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 34,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "self_scan.sample.json",
+      "kind": "path_ref",
+      "line": 59,
+      "resolvable": false
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "self_audit.json",
+      "kind": "path_ref",
+      "line": 59,
+      "resolvable": false
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "self_audit.sample.txt",
+      "kind": "path_ref",
+      "line": 60,
+      "resolvable": false
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 90,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "__init__.py",
+      "kind": "path_ref",
+      "line": 174,
+      "resolvable": false
+    },
+    {
+      "source": "situation_help.py",
+      "target": "os",
+      "kind": "import",
+      "line": 26,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "re",
+      "kind": "import",
+      "line": 27,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "sys",
+      "kind": "import",
+      "line": 28,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 2,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 22,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 23,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 24,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situations/mine.txt",
+      "kind": "path_ref",
+      "line": 24,
+      "resolvable": false
+    },
+    {
+      "source": "situation_help.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 50,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 50,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 64,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 65,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 75,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 76,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 85,
+      "resolvable": true
+    },
+    {
+      "source": "situation_help.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 94,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "ast",
+      "kind": "import",
+      "line": 27,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "io",
+      "kind": "import",
+      "line": 28,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "json",
+      "kind": "import",
+      "line": 29,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "os",
+      "kind": "import",
+      "line": 30,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "subprocess",
+      "kind": "import",
+      "line": 31,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "sys",
+      "kind": "import",
+      "line": 32,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "tempfile",
+      "kind": "import",
+      "line": 33,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "crosslink_scan",
+      "kind": "import",
+      "line": 142,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "tool_use_audit",
+      "kind": "import",
+      "line": 143,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "situation_help",
+      "kind": "import",
+      "line": 144,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 2,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 84,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 88,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "README.md",
+      "kind": "path_ref",
+      "line": 116,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "md_link",
+      "line": 117,
+      "resolvable": false,
+      "note": "the audit"
+    },
+    {
+      "source": "test_audit.py",
+      "target": "python3 audit.py --go",
+      "kind": "command",
+      "line": 117,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 117,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 118,
+      "resolvable": null
+    },
+    {
+      "source": "test_audit.py",
+      "target": "ghost.py",
+      "kind": "path_ref",
+      "line": 118,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "VCA_002",
+      "kind": "cites_claim",
+      "line": 119,
+      "resolvable": null
+    },
+    {
+      "source": "test_audit.py",
+      "target": "https://example.com/x\\n",
+      "kind": "url",
+      "line": 119,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 121,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 125,
+      "resolvable": null
+    },
+    {
+      "source": "test_audit.py",
+      "target": "sub/tool.py",
+      "kind": "path_ref",
+      "line": 127,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "README.md",
+      "kind": "path_ref",
+      "line": 127,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 157,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 159,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "VCA_001",
+      "kind": "cites_claim",
+      "line": 160,
+      "resolvable": null
+    },
+    {
+      "source": "test_audit.py",
+      "target": "VCA_002",
+      "kind": "cites_claim",
+      "line": 161,
+      "resolvable": null
+    },
+    {
+      "source": "test_audit.py",
+      "target": "ghost.py",
+      "kind": "path_ref",
+      "line": 165,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 168,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "sub/tool.py",
+      "kind": "path_ref",
+      "line": 179,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "README.md",
+      "kind": "path_ref",
+      "line": 180,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 286,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 293,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "self_scan.sample.json",
+      "kind": "path_ref",
+      "line": 313,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "__init__.py",
+      "kind": "path_ref",
+      "line": 319,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "__init__.py",
+      "kind": "path_ref",
+      "line": 321,
+      "resolvable": false
+    },
+    {
+      "source": "test_audit.py",
+      "target": "samples/self_scan.sample.json",
+      "kind": "path_ref",
+      "line": 332,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 335,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 338,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 340,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "json",
+      "kind": "import",
+      "line": 39,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "os",
+      "kind": "import",
+      "line": 40,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "re",
+      "kind": "import",
+      "line": 41,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "sys",
+      "kind": "import",
+      "line": 42,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 2,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 4,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 33,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 34,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 35,
+      "resolvable": true
+    },
+    {
+      "source": "tool_use_audit.py",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 36,
+      "resolvable": true
+    }
+  ],
+  "counts": {
+    "files": 9,
+    "edges": 137,
+    "by_kind": {
+      "cites_claim": 25,
+      "command": 3,
+      "import": 22,
+      "md_link": 2,
+      "path_ref": 84,
+      "url": 1
+    }
+  }
+}

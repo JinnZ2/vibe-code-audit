@@ -1,0 +1,4 @@
+I inherited a repo someone built with an AI assistant over one weekend.
+The README lists eight commands and three of the files it names don't
+exist. I can't tell which scripts are real entry points and which are
+abandoned drafts. Where do I even start?
