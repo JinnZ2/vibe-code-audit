@@ -1,7 +1,8 @@
 {
   "schema": "vca-edge-ledger/1",
-  "base": "/mnt/agents/output/vibe-code-audit-repo",
+  "base": "/home/ubuntu/work/okcomputer-vibe-code-audit/vibe-code-audit-repo",
   "files": [
+    ".github/workflows/checks.yml",
     "CLAIM_TABLE.md",
     "README.md",
     "WORK_ORDER.md",
@@ -973,17 +974,66 @@
       "kind": "path_ref",
       "line": 36,
       "resolvable": true
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "VCA_016",
+      "kind": "cites_claim",
+      "line": 4,
+      "resolvable": null
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 40,
+      "resolvable": true
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "situation_help.py",
+      "kind": "path_ref",
+      "line": 41,
+      "resolvable": true
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 44,
+      "resolvable": true
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "VCA_016",
+      "kind": "cites_claim",
+      "line": 47,
+      "resolvable": null
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 51,
+      "resolvable": true
+    },
+    {
+      "source": ".github/workflows/checks.yml",
+      "target": "samples/self_scan.sample.json",
+      "kind": "path_ref",
+      "line": 54,
+      "resolvable": true
     }
   ],
   "counts": {
-    "files": 9,
-    "edges": 137,
+    "files": 10,
+    "edges": 144,
     "by_kind": {
-      "cites_claim": 25,
+      "cites_claim": 27,
       "command": 3,
       "import": 22,
       "md_link": 2,
-      "path_ref": 84,
+      "path_ref": 89,
       "url": 1
     }
   }
