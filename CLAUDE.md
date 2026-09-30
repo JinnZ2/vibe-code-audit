@@ -1,6 +1,8 @@
 # vibe-code-audit
 
-An audit harness for vibe-coded codebases, on the premise that the crosslinks are often the only durable specification there is.
+> An audit harness for **vibe-coded** codebases -- codebases produced fast, through an assistant, with the operator carrying intent in session rather than in writing.
+
+Source: README.md
 
 <!-- clone-refspec-note v1.1 -->
 ## Cloning and pushing
