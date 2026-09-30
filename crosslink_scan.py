@@ -34,10 +34,12 @@
 #         python3 crosslink_scan.py --selftest
 
 import ast
+import importlib.util
 import json
 import os
 import re
 import sys
+import sysconfig
 
 SCHEMA = "vca-edge-ledger/1"
 
@@ -168,7 +170,7 @@ def _module_resolves(modname, file_index):
     if not modname or modname.startswith("."):
         return True  # relative import: resolvable by construction marker
     top = modname.split(".")[0]
-    if top in sys.stdlib_module_names:
+    if _stdlib_resolves(top):
         return True
     stem = modname.replace(".", "/")
     for cand in (stem + ".py", os.path.join(stem, "__init__.py"),
@@ -178,6 +180,52 @@ def _module_resolves(modname, file_index):
     # filename match anywhere in tree (flat vibe-coded layouts)
     return any(p.endswith("/" + top + ".py") or p == top + ".py"
                for p in file_index)
+
+
+def _path_under(path, root):
+    """Whether path is inside root, across POSIX and Windows drives."""
+    try:
+        return os.path.commonpath((os.path.realpath(path),
+                                   os.path.realpath(root))) \
+            == os.path.realpath(root)
+    except ValueError:
+        return False
+
+
+def _stdlib_resolves(top):
+    """Recognize stdlib imports on Python 3.9 and later.
+
+    Python 3.10 added sys.stdlib_module_names. On 3.9, inspect the import
+    location and accept built-in, frozen, or stdlib paths while excluding
+    site-packages even when it is nested beneath the stdlib directory.
+    """
+    names = getattr(sys, "stdlib_module_names", None)
+    if names is not None:
+        return top in names
+    if top in sys.builtin_module_names:
+        return True
+    try:
+        spec = importlib.util.find_spec(top)
+    except (ImportError, AttributeError, ValueError):
+        return False
+    if spec is None:
+        return False
+    if spec.origin in ("built-in", "frozen"):
+        return True
+    locations = []
+    if spec.origin:
+        locations.append(spec.origin)
+    if spec.submodule_search_locations:
+        locations.extend(spec.submodule_search_locations)
+    paths = sysconfig.get_paths()
+    third_party = [paths.get("purelib"), paths.get("platlib")]
+    stdlib = [paths.get("stdlib"), paths.get("platstdlib")]
+    for location in locations:
+        if any(root and _path_under(location, root) for root in third_party):
+            continue
+        if any(root and _path_under(location, root) for root in stdlib):
+            return True
+    return False
 
 
 def scan(paths):
@@ -267,6 +315,22 @@ def scan(paths):
     }
 
 
+def _input_paths(argv):
+    """Return positional scan paths, excluding option values."""
+    paths = []
+    skip_value = False
+    for arg in argv[1:]:
+        if skip_value:
+            skip_value = False
+            continue
+        if arg == "--out":
+            skip_value = True
+            continue
+        if not arg.startswith("--"):
+            paths.append(arg)
+    return paths
+
+
 def main(argv):
     if "--selftest" in argv:
         here = os.path.dirname(os.path.abspath(__file__))
@@ -279,7 +343,7 @@ def main(argv):
               % (led["counts"]["files"], led["counts"]["edges"],
                  sorted(kinds)))
         return 0
-    paths = [a for a in argv[1:] if not a.startswith("--")]
+    paths = _input_paths(argv)
     if not paths:
         print(__doc__)
         return 2

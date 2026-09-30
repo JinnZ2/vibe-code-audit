@@ -170,6 +170,24 @@ check("scan.real_path_resolves",
 check("scan.import_stdlib_resolves",
       has("import", lambda e: e["target"] == "os"
           and e["resolvable"] is True))
+
+# Python 3.9 has no sys.stdlib_module_names. Exercise that branch even when
+# this suite runs under a newer interpreter so the documented floor stays
+# measured rather than inferred from the CI matrix alone.
+class _Python39Sys:
+    builtin_module_names = sys.builtin_module_names
+
+
+real_scan_sys = cs.sys
+try:
+    cs.sys = _Python39Sys()
+    check("scan.py39_stdlib_fallback",
+          cs._module_resolves("os", set()) is True)
+    check("scan.py39_missing_stays_unresolved",
+          cs._module_resolves("missing_module_xyz", set()) is False)
+finally:
+    cs.sys = real_scan_sys
+
 check("scan.import_missing_marked",
       has("import", lambda e: e["target"] == "missing_module_xyz"
           and e["resolvable"] is False))
@@ -184,6 +202,9 @@ led2 = cs.scan([fixdir])
 check("scan.deterministic",
       json.dumps(led["edges"], sort_keys=True)
       == json.dumps(led2["edges"], sort_keys=True))
+check("scan.output_path_not_input",
+      cs._input_paths(["crosslink_scan.py", ".", "--out",
+                       "/tmp/rescan.json"]) == ["."])
 
 # empty tree is a return, not an error
 emptydir = tempfile.mkdtemp()

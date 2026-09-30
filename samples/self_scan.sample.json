@@ -395,30 +395,44 @@
     },
     {
       "source": "crosslink_scan.py",
-      "target": "json",
+      "target": "importlib.util",
       "kind": "import",
       "line": 37,
       "resolvable": true
     },
     {
       "source": "crosslink_scan.py",
-      "target": "os",
+      "target": "json",
       "kind": "import",
       "line": 38,
       "resolvable": true
     },
     {
       "source": "crosslink_scan.py",
-      "target": "re",
+      "target": "os",
       "kind": "import",
       "line": 39,
       "resolvable": true
     },
     {
       "source": "crosslink_scan.py",
-      "target": "sys",
+      "target": "re",
       "kind": "import",
       "line": 40,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "sys",
+      "kind": "import",
+      "line": 41,
+      "resolvable": true
+    },
+    {
+      "source": "crosslink_scan.py",
+      "target": "sysconfig",
+      "kind": "import",
+      "line": 42,
       "resolvable": true
     },
     {
@@ -467,35 +481,35 @@
       "source": "crosslink_scan.py",
       "target": "self_scan.sample.json",
       "kind": "path_ref",
-      "line": 59,
+      "line": 61,
       "resolvable": false
     },
     {
       "source": "crosslink_scan.py",
       "target": "self_audit.json",
       "kind": "path_ref",
-      "line": 59,
+      "line": 61,
       "resolvable": false
     },
     {
       "source": "crosslink_scan.py",
       "target": "self_audit.sample.txt",
       "kind": "path_ref",
-      "line": 60,
+      "line": 62,
       "resolvable": false
     },
     {
       "source": "crosslink_scan.py",
       "target": "test_audit.py",
       "kind": "path_ref",
-      "line": 90,
+      "line": 92,
       "resolvable": true
     },
     {
       "source": "crosslink_scan.py",
       "target": "__init__.py",
       "kind": "path_ref",
-      "line": 174,
+      "line": 176,
       "resolvable": false
     },
     {
@@ -832,77 +846,84 @@
       "source": "test_audit.py",
       "target": "sub/tool.py",
       "kind": "path_ref",
-      "line": 179,
+      "line": 197,
       "resolvable": false
     },
     {
       "source": "test_audit.py",
       "target": "README.md",
       "kind": "path_ref",
-      "line": 180,
+      "line": 198,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "crosslink_scan.py",
       "kind": "path_ref",
-      "line": 286,
+      "line": 206,
+      "resolvable": true
+    },
+    {
+      "source": "test_audit.py",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 307,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 293,
+      "line": 314,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "self_scan.sample.json",
       "kind": "path_ref",
-      "line": 313,
+      "line": 334,
       "resolvable": false
     },
     {
       "source": "test_audit.py",
       "target": "__init__.py",
       "kind": "path_ref",
-      "line": 319,
+      "line": 340,
       "resolvable": false
     },
     {
       "source": "test_audit.py",
       "target": "__init__.py",
       "kind": "path_ref",
-      "line": 321,
+      "line": 342,
       "resolvable": false
     },
     {
       "source": "test_audit.py",
       "target": "samples/self_scan.sample.json",
       "kind": "path_ref",
-      "line": 332,
+      "line": 353,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "crosslink_scan.py",
       "kind": "path_ref",
-      "line": 335,
+      "line": 356,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "tool_use_audit.py",
       "kind": "path_ref",
-      "line": 338,
+      "line": 359,
       "resolvable": true
     },
     {
       "source": "test_audit.py",
       "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 340,
+      "line": 361,
       "resolvable": true
     },
     {
@@ -1027,13 +1048,13 @@
   ],
   "counts": {
     "files": 10,
-    "edges": 144,
+    "edges": 147,
     "by_kind": {
       "cites_claim": 27,
       "command": 3,
-      "import": 22,
+      "import": 24,
       "md_link": 2,
-      "path_ref": 89,
+      "path_ref": 90,
       "url": 1
     }
   }
