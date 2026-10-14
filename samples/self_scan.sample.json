@@ -1,12 +1,14 @@
 {
   "schema": "vca-edge-ledger/1",
-  "base": "/home/ubuntu/work/okcomputer-vibe-code-audit/vibe-code-audit-repo",
+  "base": "/home/ubuntu/work-wo10/repos/vibe-code-audit",
   "files": [
     ".github/workflows/checks.yml",
     "CLAIM_TABLE.md",
     "README.md",
+    "READ_ME_THIS_WAY.md",
     "WORK_ORDER.md",
     "crosslink_scan.py",
+    "memory-archive/README.md",
     "situation_help.py",
     "situations/disconnected_claims.txt",
     "situations/inherited_repo.txt",
@@ -212,121 +214,128 @@
     },
     {
       "source": "README.md",
+      "target": "READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 1,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
       "target": "crosslink_scan.py",
-      "kind": "path_ref",
-      "line": 14,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 15,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 16,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 17,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "situation_help.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 18,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "situation_help.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 19,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "test_audit.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 20,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "crosslink_scan.py",
+      "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 57,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "audit.py",
-      "kind": "path_ref",
-      "line": 60,
-      "resolvable": false
-    },
-    {
-      "source": "README.md",
-      "target": "crosslink_scan.py",
-      "kind": "path_ref",
-      "line": 74,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 76,
+      "line": 21,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 78,
+      "line": 22,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "test_audit.py",
       "kind": "path_ref",
+      "line": 23,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 60,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 63,
+      "resolvable": false
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 77,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 79,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
       "line": 81,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 84,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "WORK_ORDER.md",
       "kind": "path_ref",
-      "line": 85,
+      "line": 88,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "VCA_001",
       "kind": "cites_claim",
-      "line": 86,
+      "line": 89,
       "resolvable": null
     },
     {
       "source": "README.md",
       "target": "VCA_016",
       "kind": "cites_claim",
-      "line": 86,
+      "line": 89,
       "resolvable": null
     },
     {
       "source": "README.md",
       "target": "CLAIM_TABLE.md",
       "kind": "path_ref",
-      "line": 86,
+      "line": 89,
       "resolvable": true
     },
     {
@@ -1044,17 +1053,39 @@
       "kind": "path_ref",
       "line": 54,
       "resolvable": true
+    },
+    {
+      "source": "memory-archive/README.md",
+      "target": "../READ_ME_THIS_WAY.md",
+      "kind": "md_link",
+      "line": 1,
+      "resolvable": true,
+      "note": "READ_ME_THIS_WAY.md"
+    },
+    {
+      "source": "memory-archive/README.md",
+      "target": "READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 1,
+      "resolvable": true
+    },
+    {
+      "source": "memory-archive/README.md",
+      "target": "../READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 1,
+      "resolvable": true
     }
   ],
   "counts": {
-    "files": 10,
-    "edges": 147,
+    "files": 12,
+    "edges": 151,
     "by_kind": {
       "cites_claim": 27,
       "command": 3,
       "import": 24,
-      "md_link": 2,
-      "path_ref": 90,
+      "md_link": 3,
+      "path_ref": 93,
       "url": 1
     }
   }

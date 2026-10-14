@@ -1,3 +1,6 @@
+> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+> Mismatches, dead ends and odd names in this repo are kept on purpose.
+
 # vibe-code-audit
 
 An audit harness for **vibe-coded** codebases -- codebases produced fast,
