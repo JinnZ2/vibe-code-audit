@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.12"]
-        # 3.9 is the floor the README claims ("parses under 3.9");
-        # 3.12 is a current version. Testing both makes the claim
-        # measured rather than asserted.
+        python-version: ["3.10", "3.12", "3.x"]
+        # 3.10 is the CI floor (decided 2026-11-10; ubuntu-latest has no 3.9).
+        # The README still says "parses under 3.9"; that claim is no longer
+        # measured by CI. 3.x is the current release.
     steps:
       - uses: actions/checkout@v4
 
