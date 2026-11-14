@@ -4,6 +4,7 @@
   "files": [
     ".github/workflows/checks.yml",
     "CLAIM_TABLE.md",
+    "READING_PROTOCOL.md",
     "README.md",
     "READ_ME_THIS_WAY.md",
     "WORK_ORDER.md",
@@ -213,129 +214,159 @@
       "resolvable": null
     },
     {
-      "source": "README.md",
+      "source": "READING_PROTOCOL.md",
       "target": "READ_ME_THIS_WAY.md",
+      "kind": "md_link",
+      "line": 9,
+      "resolvable": true,
+      "note": "READ_ME_THIS_WAY.md"
+    },
+    {
+      "source": "READING_PROTOCOL.md",
+      "target": "READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 9,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "READING_PROTOCOL.md",
+      "kind": "md_link",
+      "line": 1,
+      "resolvable": true,
+      "note": "READING_PROTOCOL.md"
+    },
+    {
+      "source": "README.md",
+      "target": "READING_PROTOCOL.md",
       "kind": "path_ref",
       "line": 1,
       "resolvable": true
     },
     {
       "source": "README.md",
+      "target": "READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 4,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
       "target": "crosslink_scan.py",
-      "kind": "path_ref",
-      "line": 17,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 18,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 19,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 20,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "situation_help.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 21,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "situation_help.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 22,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "test_audit.py",
+      "target": "tool_use_audit.py",
       "kind": "path_ref",
       "line": 23,
       "resolvable": true
     },
     {
       "source": "README.md",
-      "target": "crosslink_scan.py",
+      "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 60,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "audit.py",
-      "kind": "path_ref",
-      "line": 63,
-      "resolvable": false
-    },
-    {
-      "source": "README.md",
-      "target": "crosslink_scan.py",
-      "kind": "path_ref",
-      "line": 77,
-      "resolvable": true
-    },
-    {
-      "source": "README.md",
-      "target": "tool_use_audit.py",
-      "kind": "path_ref",
-      "line": 79,
+      "line": 24,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "situation_help.py",
       "kind": "path_ref",
-      "line": 81,
+      "line": 25,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "test_audit.py",
       "kind": "path_ref",
+      "line": 26,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 63,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "audit.py",
+      "kind": "path_ref",
+      "line": 66,
+      "resolvable": false
+    },
+    {
+      "source": "README.md",
+      "target": "crosslink_scan.py",
+      "kind": "path_ref",
+      "line": 80,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "tool_use_audit.py",
+      "kind": "path_ref",
+      "line": 82,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "situation_help.py",
+      "kind": "path_ref",
       "line": 84,
+      "resolvable": true
+    },
+    {
+      "source": "README.md",
+      "target": "test_audit.py",
+      "kind": "path_ref",
+      "line": 87,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "WORK_ORDER.md",
       "kind": "path_ref",
-      "line": 88,
+      "line": 91,
       "resolvable": true
     },
     {
       "source": "README.md",
       "target": "VCA_001",
       "kind": "cites_claim",
-      "line": 89,
+      "line": 92,
       "resolvable": null
     },
     {
       "source": "README.md",
       "target": "VCA_016",
       "kind": "cites_claim",
-      "line": 89,
+      "line": 92,
       "resolvable": null
     },
     {
       "source": "README.md",
       "target": "CLAIM_TABLE.md",
       "kind": "path_ref",
-      "line": 89,
+      "line": 92,
       "resolvable": true
     },
     {
@@ -1006,6 +1037,28 @@
       "resolvable": true
     },
     {
+      "source": "memory-archive/README.md",
+      "target": "../READ_ME_THIS_WAY.md",
+      "kind": "md_link",
+      "line": 1,
+      "resolvable": true,
+      "note": "READ_ME_THIS_WAY.md"
+    },
+    {
+      "source": "memory-archive/README.md",
+      "target": "READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 1,
+      "resolvable": true
+    },
+    {
+      "source": "memory-archive/README.md",
+      "target": "../READ_ME_THIS_WAY.md",
+      "kind": "path_ref",
+      "line": 1,
+      "resolvable": true
+    },
+    {
       "source": ".github/workflows/checks.yml",
       "target": "VCA_016",
       "kind": "cites_claim",
@@ -1053,39 +1106,17 @@
       "kind": "path_ref",
       "line": 54,
       "resolvable": true
-    },
-    {
-      "source": "memory-archive/README.md",
-      "target": "../READ_ME_THIS_WAY.md",
-      "kind": "md_link",
-      "line": 1,
-      "resolvable": true,
-      "note": "READ_ME_THIS_WAY.md"
-    },
-    {
-      "source": "memory-archive/README.md",
-      "target": "READ_ME_THIS_WAY.md",
-      "kind": "path_ref",
-      "line": 1,
-      "resolvable": true
-    },
-    {
-      "source": "memory-archive/README.md",
-      "target": "../READ_ME_THIS_WAY.md",
-      "kind": "path_ref",
-      "line": 1,
-      "resolvable": true
     }
   ],
   "counts": {
-    "files": 12,
-    "edges": 151,
+    "files": 13,
+    "edges": 155,
     "by_kind": {
       "cites_claim": 27,
       "command": 3,
       "import": 24,
-      "md_link": 3,
-      "path_ref": 93,
+      "md_link": 5,
+      "path_ref": 95,
       "url": 1
     }
   }
